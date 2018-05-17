@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.fuhaidev.app.dao.common.BaseMapper"/>
+            <property name="caseSensitive" value="true"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/test2?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;tinyInt1isBit=false&amp;allowMultiQueries=true&amp;useLocalSessionState=true&amp;autoReconnect=true&amp;failOverReadOnly=false"
+                        userId="root"
+                        password="">
+        </jdbcConnection>
+
+
+        <javaModelGenerator targetPackage="test.com.fuhaidev.app.dao.entity.test2"
+                            targetProject="../test/java/"/>
+
+        <sqlMapGenerator targetPackage="mybatis/test2"
+                         targetProject="../test/resources/"/>
+
+        <javaClientGenerator targetPackage="test.com.fuhaidev.app.dao.mapper.test2"
+                             targetProject="../test/java/"
+                             type="XMLMAPPER"/>
+
+        <table tableName="item" domainObjectName="ItemEntity"
+        enableCountByExample="false"
+        enableUpdateByExample="false"
+        enableDeleteByExample="false"
+        enableSelectByExample="false"
+        selectByExampleQueryId="false">
+        <property name="useActualColumnNames" value="false"/>
+        <generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>
+        <columnRenamingRule searchString="^[f|F]_" replaceString=""/>
+        </table>
+
+        <!--<table tableName="t_shop_area" domainObjectName="ShopAreaEntity"-->
+               <!--enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<property name="useActualColumnNames" value="false"/>-->
+            <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+            <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="t_demo" domainObjectName="DemoEntity"-->
+        <!--enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<property name="useActualColumnNames" value="false"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]" replaceString=""/>-->
+        <!--</table>-->
+
+
+        <!--<table tableName="t_shop_delivery_config" domainObjectName="ShopDeliveryConfigEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+        <!--<table tableName="t_shop_delivery_config" domainObjectName="ShopDeliveryConfigEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="t_shop_delivery_config_detail" domainObjectName="ShopDeliveryConfigDetailEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="dcb_shop_info" domainObjectName="DcbShopInfoEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="dcb_dcj_info" domainObjectName="DcbDcjInfoEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="true"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="dcb_user" domainObjectName="DcbUserEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="dcb_table_info" domainObjectName="DcbTableInfoEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+       <!-- <table tableName="push_msg_log" domainObjectName="PushMsgLogEntity" enableCountByExample="false"
+               enableUpdateByExample="true"
+               enableDeleteByExample="true"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>
+            <columnRenamingRule searchString="^[f|F]_" replaceString=""/>
+        </table>-->
+
+        <!--<table tableName="t_shop_delivery_config_detail" domainObjectName="ShopDeliveryConfigDetailEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+
+        <!--<table tableName="t_menu_sync_config" domainObjectName="MenuSyncConfigEntity" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+            <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="member_level_mapping" domainObjectName="MemberLevelMappingEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="dcb_shop_pay_mode" domainObjectName="DcbShopPayModeEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="t_menu" domainObjectName="MenuEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="t_menu_category" domainObjectName="MenuCategoryEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="shop_plan_item" domainObjectName="ShopPlanItemEntity" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="true"-->
+        <!--enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false">-->
+        <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+        <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+       <!-- <table tableName="push_msg_log" domainObjectName="PushMsgLogEntity" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="MYSQL" identity="true"/>
+        </table>-->
+
+
+        <!--<table tableName="t_takeaway_category" domainObjectName="TakeawayCategoryEntity" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+            <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="t_takeaway_item" domainObjectName="TakeawayItemEntity" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+            <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+
+        <!--<table tableName="t_takeaway_sku" domainObjectName="TakeawaySkuEntity" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+            <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+
+        <!--<table tableName="t_takeaway_item_picture" domainObjectName="TakeawayItemPictureEntity" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+            <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+
+        <!--<table tableName="t_menu_aggregation" domainObjectName="MenuAggregationEntity" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+            <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+        <!--<table tableName="t_menu_aggregation_spec" domainObjectName="MenuAggregationSpecEntity" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+            <!--<generatedKey column="f_id" sqlStatement="MYSQL" identity="true"/>-->
+            <!--<columnRenamingRule searchString="^[f|F]_" replaceString=""/>-->
+        <!--</table>-->
+
+    </context>
+</generatorConfiguration>
